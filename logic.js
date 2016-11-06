@@ -1,17 +1,11 @@
 
-//test comment
+
 var textArrayA = textString.split(',');
-
-//alert(textArrayA.length);
-
-		//input/split('')
-		var userLetters = [];
-		//$('.status-box').val().split();
-		//["g", "i", "p", "n", "t", "d", "i", "v", "e"];
-
+var userLetters = [];		
 var arrMatches = [];
+//$('.posts').selectable();
 
-function checkString(str){
+function checkString(str){	
 	//this allows holder to be modified without affecting userLetters
 	//find a better way to do this******************
 	var holderTest = userLetters.join('');
@@ -58,15 +52,28 @@ var main = function(){
 	
 };
 
-$('.btn').click(function(){
-		userLetters = $('.status-box').val().toLowerCase().split();
-		//delete previous list before running new search*******
-		main();
-		$('.status-box').val('');
-		userLetters = [];
-	});	
-		
+
+$('.btn-go').click(function(){
+			userLetters = $('.status-box').val().toLowerCase().split();	
+			$(".posts").empty();
+			main();	
+			//post above outcome list what the letters were eg "YOUR LETTERS WERE S O M E T H I N G"
+			$('.status-box').val('');
+			userLetters = [];	
+			arrMatches = [];
+	});
+
+$('.btn-random').click(function(){
+	//let it just fill the text field - user still has to click to letters will be printed
+	var random = 'n i n e r a n d o m'
+	$('.status-box').val(random);
+});
+
+$('.btn-clear').click(function(){
+	$('.status-box').val('');
+	$(".posts").empty();
+});
+	
 
 
-//main();
-//$(document).ready(main);
+

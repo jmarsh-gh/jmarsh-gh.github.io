@@ -6,7 +6,7 @@ body {
 }
 
 .container {
-  width: 520px;
+  align: center;
   margin-top: 20px;
 }
 
@@ -30,6 +30,8 @@ body {
   padding-left: 0;
   width: 100%;
 }
+
+
 
 /*.posts li {
   background-color: #fff;
